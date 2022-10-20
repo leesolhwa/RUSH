@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/* 가운데 영역 */
+.container { 
+  width: 1191px; margin: auto;}
+/* row 영역 */
+.row {
+  padding: 0 16px;
+}
+
+
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%; height: auto;
+  z-index: 500;
+  background: #fff;
+  border-bottom: 1px solid rgba(191, 191, 191, 0.5);
+}
+
+/* ########## header ########### */
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  float: left;
+  line-height: 55px;
+}
+.header h1 a .logo {  display: inline-block;}
+.header h1 a .logo img { width: 100%;}
+
+.nav_gnb li {
+  float: left;
+  width: 85px;
+  text-align: center;
+  display: inline-block;
+}
+.nav_gnb >li >a {
+  display: block;
+  padding: 14px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.gnb{position: relative;}
+.sub{
+  display: flex;
+  flex-direction: column;
+  position: absolute; top: 80px;
+  z-index: 200;
+}
+.sub >li{
+}
+.sub >li >a{
+  display: none; 
+  line-height: 60px;  padding-top: 15px;
+  color: #000; font-size: 15px; font-weight: 400;
+}
+.sub a:hover{
+  color: #187132;
+}
+
+.sub_shadow{
+  display: none;
+  position: absolute; top: 70px; left: 0;
+  width: 100%; height: 330px;
+  background: #fff;
+  box-shadow: 0 8px 10px rgba(211, 211, 211, 0.3);
+  z-index: 100;
+} 
+
+.header .rNav{
+} 
+.header .rNav ul{} 
+.header .rNav ul li{
+  float: left;
+  width: 50px;
+  text-align: center;
+} 
+.header .rNav ul li a{
+  display: inline-block;
+  width: 25px; height: 25px;
+  padding: 14px 10px;
+} 
+.header .rNav ul li a img{
+  
+} 
+
+
+#mNav {
+  display: none;
+  position: absolute;
+  right: 16px;
+  top: 23px;
+}
+
+/* 모바일 메뉴아이콘 */
+.ham {
+  width: 25px;
+  height: 4px;
+}
+.ham span {
+  width: 25px;
+  height: 4px;
+  background: #211f1f;
+  display: block;
+  position: relative;
+}
+.ham span::before {
+  content: '';
+  width: 25px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: -7px;
+  background: #211f1f;
+}
+.ham span::after {
+  content: '';
+  width: 25px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  background: #211f1f;
+}
+
+
+
+#footer {
+  background: #121213;
+}
+
+/* footer */
+#footer .container {
+  position: relative;
+}
+.footer_core{
+  display: flex;
+    justify-content: center;
+  width: 100%;
+  height: 140px;
+  background: #f2f2f2;
+  text-align: center;
+  padding: 15px 0;
+}
+.footer_core ul{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_core ul img{ width: 136px;}
+
+.footer_sns {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  z-index: 5;
+}
+.footer_sns ul li {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer_sns .tel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 340px; height: 100px;
+  font-weight: bold;
+  
+}
+.footer_sns .tel a {
+
+  color: rgba(255, 255, 255, 0.479);
+  font-size: 18px; 
+}
+.footer_sns .tel a em {
+  color: #fff;
+  font-size: 24px;
+}
+
+.footer_infor {
+  padding: 15px 0;
+}
+.footer_infor ul {
+  padding: 15px 0;
+}
+.footer_infor ul li {
+  position: relative;
+  display: inline-block;
+  padding-right: 16px;
+}
+.footer_infor ul li::after {
+  content: '';
+  width: 1px;
+  height: 11px;
+  background: #8f8f8f;
+  position: absolute;
+  right: 6px;
+  top: 5px;
+}
+.footer_infor ul li:last-child:after {
+  display: none;
+}
+.footer_infor ul li a {
+  color: #8f8f8f;
+}
+.footer_infor h2 img {
+  width: 80px; 
+  filter: brightness(8);
+}
+.footer_infor address p {
+  color: #8f8f8f;
+}
+
+
+@media (max-width:1191px){
+  .container {
+    width: 100%;
+  }
+  .header{
+    width: 100%; height: auto;
+  }
+
+
+}
+@media (max-width:991px){
+  .header .nav{
+    display: none;
+  }
+  .header .rNav{
+    display: none;
+  }
+  #mNav {
+    display: block;
+  }
+
+
+  /* footer */
+  .footer_sns {
+    position: static;
+    text-align: center;
+    background: #212222;
+    padding: 15px 0;
+  }
+  .footer_sns .tel {
+    display: none;
+  }
+  .footer_infor {
+    text-align: center;
+  }
+  .footer_core ul{
+    width: 100%;
+    height: auto;
+  }
+  .footer_core ul img{ width: 100%;}
+  .footer_core{height: auto;}
+}
+
+@media (max-width:768px) {
+  .footer_infor {
+    padding: 25px 0;
+  }
+  .footer_infor address p br {
+    display: none;
+  }
+}
